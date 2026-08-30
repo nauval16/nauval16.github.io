@@ -1,223 +1,681 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nauval-Portfolio</title>
+    <title>Nauval Rafi | Junior Web Developer</title>
     <link rel="icon" href="images/icon-2.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-    <!--box icons -->
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        },
+                        surface: {
+                            dark: '#020617',     /* Slate 950 */
+                            card: '#0f172a',     /* Slate 900 */
+                            border: '#1e293b',   /* Slate 800 */
+                            hover: '#334155'    /* Slate 700 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #93c5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body>
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
-    </div>
-    <nav class="navbar">
-        <div class="max-width">
-            <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
-            <ul class="menu">
-                <li><a href="#home" class="menu-btn">Home</a></li>
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#project" class="menu-btn">Project</a></li>
-                <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#teams" class="menu-btn">Hobbi</a></li>
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
-            </ul>
-            <div class="menu-btn">
+<body class="bg-surface-dark text-slate-300 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <button id="scrollUpBtn" aria-label="Scroll to top" class="fixed bottom-8 right-8 bg-brand-600 hover:bg-brand-500 text-white w-12 h-12 rounded-full shadow-lg shadow-brand-500/20 opacity-0 pointer-events-none transition-all duration-300 z-50 flex items-center justify-center">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300" id="header">
+        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#home" class="text-2xl font-bold tracking-tight text-white">
+                Port<span class="text-brand-500">folio</span>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-brand-400 transition">Beranda</a>
+                <a href="#about" class="hover:text-brand-400 transition">Tentang</a>
+                <a href="#skills" class="hover:text-brand-400 transition">Keahlian</a>
+                <a href="#projects" class="hover:text-brand-400 transition">Proyek</a>
+                <a href="#hobbies" class="hover:text-brand-400 transition">Hobi</a>
+                <a href="#contact" class="bg-brand-600 hover:bg-brand-500 text-white px-5 py-2.5 rounded-full transition shadow-md shadow-brand-500/20">Kontak Saya</a>
+            </div>
+
+            <button id="menuBtn" aria-label="Toggle Menu" class="md:hidden text-2xl text-slate-200 focus:outline-none">
                 <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+            </button>
+        </nav>
 
-    <!-- home section start -->
-    <section class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Halo, Nama Saya</div>
-                <div class="text-2">Nauval Rafi</div>
-                <div class="text-3">Saya Adalah <span class="typing"></span></div>
-                <a href="#about">Hire me</a>
-            </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-surface-card/95 backdrop-blur-md border-b border-surface-border px-6 py-6 flex flex-col space-y-4 text-base font-medium">
+            <a href="#home" class="mobile-link hover:text-brand-400 transition">Beranda</a>
+            <a href="#about" class="mobile-link hover:text-brand-400 transition">Tentang</a>
+            <a href="#skills" class="mobile-link hover:text-brand-400 transition">Keahlian</a>
+            <a href="#projects" class="mobile-link hover:text-brand-400 transition">Proyek</a>
+            <a href="#hobbies" class="mobile-link hover:text-brand-400 transition">Hobi</a>
+            <a href="#contact" class="mobile-link text-brand-400 font-semibold">Kontak Saya</a>
         </div>
-        <div class="home-sci">
-            <a href="https://www.instagram.com/nauval.16/"><i class='bx bxl-instagram'></i></a>
-            <a href="https://www.tiktok.com/@upowx"><i class='bx bxl-tiktok'></i></a>
-            <a href="https://www.linkedin.com/in/nauval-rafi-/"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/NauvalRafi16"><i class='bx bxl-github'></i></a>
-            <!-- <a href="#"><i class='bx bxl-twitter'></i></a> -->
-        </div>
-    </section>
+    </header>
 
-    <!-- about section start -->
-    <section class="about" id="about">
-        <div class="max-width">
-            <h2 class="title">About me</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="images/nauval.jpg" alt="">
-                </div>
-                <div class="column right">
-                    <div class="text">Nauval Rafi Adelia Putra <span class="typing-2"></span></div>
-                    <p>Halo. Saya Nauval Rafi. Saya adalah junior web developer. Saya merupakan fresh graduate SMKN7 Baleendah. Saya memiliki impian bisa sukses di bidang it khususnya di pengembangan web. Saya adalah orang yang selalu bersungguh sungguh dalam menggapai sesuatu, disiplin dalam waktu dan selalu memiliki ide ide baru.</p>
-                    <a href="#">Download CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="home" class="min-h-screen flex items-center justify-center pt-24 pb-16 px-6 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
-    <!-- my project section start -->
-    <section class="teams" id="project">
-        <div class="max-width">
-            <h2 class="title">My Project</h2>
-            <div class="carousel owl-carousel">
-                <div class="card">
-                    <div class="box">
-                        <img style="height: 180px; width: 300px; border: 3px solid black;" src="images/kodam.png" alt="">
-                        <div class="text">Cek khodam</div>
-                        <p>Merupakan sebuah website sederhana menggunakan framework laravel</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img style="height: 180px; width: 300px; border: 3px solid black;" src="images/absensi.jpg" alt="">
-                        <div class="text">Absensi</div>
-                        <p>Aplikasi absensi berbasis website menggunakan alat IOT dan kartu rfid </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img style="height: 180px; width: 300px; border: 3px solid black;" src="images/resto1.png" alt="">
-                        <div class="text">Restaurant management system</div>
-                        <p>Aplikasi management restaurant dengan framework laravel</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- skills section start -->
-    <section class="skills" id="skills">
-        <div class="max-width">
-          <h2 class="title">My Skills</h2>
-          <div class="skills-content">
-            <div class="carousel owl-carousel">
-              <div class="card">
-                <div class="box">
-                  <img src="images/html.png" alt="">
-                  <div class="text">HTML</div>
-                  <p>Saya memiliki pemahaman yang mendalam tentang HTML karena HTML adalah fondasi dasar dari pengembangan web</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                  <img src="images/laravel-removebg-preview.png" alt="">
-                  <div class="text">Laravel</div>
-                  <p>Saya menguasai bahasa PHP dan sangat berpengalaman menggunakan framework Laravel untuk pengembangan web</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                  <img src="images/Bootstrap-removebg-preview.png" alt="">
-                  <div class="text">Bootsrap</div>
-                  <p>Saya mahir menggunakan framework Bootstrap untuk mengembangkan bagian front-end dari proyek-proyek saya</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                  <img src="images/JS.png" alt="">
-                  <div class="text">JavaScript</div>
-                  <p>Saya memiliki keahlian dalam bahasa JavaScript dan dapat menciptakan efek interaktif yang menjadikanya lebih menarik</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-    <!-- teams section start -->
-    <section class="teams" id="teams">
-        <div class="max-width">
-            <h2 class="title">My Hobbi</h2>
-            <div class="carousel owl-carousel">
-                <div class="card">
-                    <div class="box">
-                        <img src="images/futsal.png" alt="">
-                        <div class="text">Futsal</div>
-                        <p>Sejak Kecil Saya Selalu Bermain Bola Dan Futsal Bersama Teman Teman</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/badminton.png" alt="">
-                        <div class="text">Badminton</div>
-                        <p>Saya Dan Teman Teman Saya Juga Selalu Meluangkan Waktu Untuk Bermain Bulu Tangkis</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/game.png" alt="">
-                        <div class="text">Bermain Game</div>
-                        <p>Saya juga hobi bermain game seperti mobile legends dan pubg</p>
-                    </div>
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7 text-center md:text-left space-y-6">
+                
+                <div class="inline-flex items-center space-x-2 bg-surface-card border border-surface-border px-4 py-2 rounded-full text-xs text-brand-400 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>Terbuka untuk Peluang Kerja & Proyek</span>
                 </div>
                 
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                    Halo, Saya <br>
+                    <span class="gradient-text">Nauval Rafi</span>
+                </h1>
+                
+                <h2 class="text-xl sm:text-2xl font-semibold text-slate-300">
+                    <span class="typing text-brand-400"></span>
+                </h2>
+
+                <p class="text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed mx-auto md:mx-0">
+                    Pengembang Web & Mahasiswa Sistem Informasi yang berdedikasi menciptakan aplikasi modern, arsitektur database yang efisien, dan analisis sistem yang terstruktur.
+                </p>
+
+                <div class="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#projects" class="bg-brand-600 hover:bg-brand-500 text-white font-medium px-7 py-3.5 rounded-full transition shadow-lg shadow-brand-500/25 flex items-center gap-2">
+                        Lihat Proyek <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#about" class="border border-surface-border hover:border-slate-500 bg-surface-card hover:bg-surface-hover text-slate-200 font-medium px-7 py-3.5 rounded-full transition">
+                        Pelajari Tentang Saya
+                    </a>
+                </div>
+
+                <div class="pt-6 flex items-center justify-center md:justify-start space-x-4">
+                    <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider hidden sm:inline-block">Sosial Media:</span>
+                    <a href="https://github.com/NauvalRafi16" target="_blank" rel="noreferrer" class="w-10 h-10 rounded-full bg-surface-card border border-surface-border flex items-center justify-center text-slate-300 hover:text-white hover:bg-brand-600 hover:border-brand-500 transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nauval-rafi-/" target="_blank" rel="noreferrer" class="w-10 h-10 rounded-full bg-surface-card border border-surface-border flex items-center justify-center text-slate-300 hover:text-white hover:bg-brand-600 hover:border-brand-500 transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nauval.16/" target="_blank" rel="noreferrer" class="w-10 h-10 rounded-full bg-surface-card border border-surface-border flex items-center justify-center text-slate-300 hover:text-white hover:bg-brand-600 hover:border-brand-500 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@upowx" target="_blank" rel="noreferrer" class="w-10 h-10 rounded-full bg-surface-card border border-surface-border flex items-center justify-center text-slate-300 hover:text-white hover:bg-brand-600 hover:border-brand-500 transition">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:col-span-5 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-600 to-cyan-500 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden border-2 border-surface-border bg-surface-card">
+                        <img src="images/nauval.jpg" alt="Nauval Rafi" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" onerror="this.style.display='none'">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- contact section start -->
-    <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Contact me</h2>
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
-                    <p>Jika Ada Yang Di Butuhkan Hubungi Saya!</p>
-                    <div class="icons">
-                        <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">Nama</div>
-                                <div class="sub-title">Nauval Rafi</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="info">
-                                <div class="head">Alamat</div>
-                                <div class="sub-title">Baleendah</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-envelope" style="font-size: 20px;"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="sub-title">-</div>
-                            </div>
+    <section id="about" class="py-24 bg-surface-card border-y border-surface-border px-6">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold text-brand-400 uppercase tracking-widest">Profil Profesional</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white">Tentang Saya</h3>
+                <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-2xl overflow-hidden border border-surface-border shadow-2xl">
+                        <img src="images/nauval.jpg" alt="Nauval Rafi Working" class="w-full h-auto object-cover" onerror="this.style.display='none'">
+                        <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-surface-dark to-transparent">
+                            <h4 class="text-lg font-bold text-white">Nauval Rafi Adelia Putra</h4>
+                            <p class="text-sm text-brand-400">Junior Web Developer & Sistem Informasi</p>
                         </div>
                     </div>
                 </div>
-                </div>
+
+                <div class="lg:col-span-7 space-y-6 text-slate-300 leading-relaxed">
+                    <p class="text-lg font-medium text-slate-200">
+                        Saya adalah seorang <span class="text-white font-semibold">Web Developer</span> dan <span class="text-white font-semibold">Mahasiswa Sistem Informasi</span> yang berfokus pada pengembangan aplikasi web yang efisien, terstruktur, dan responsif.
+                    </p>
+                    <p>
+                        Berbekal fondasi pendidikan dari SMKN 7 Baleendah dan pengembangan akademis Sistem Informasi, saya mengombinasikan logika pemrograman dengan analisis alur bisnis. Keahlian utama saya berpusat pada perancangan basis data, integrasi sistem backend, serta pembuatan antarmuka pengguna yang intuitif.
+                    </p>
+                    <p>
+                        Saya selalu berdedikasi untuk menghadirkan solusi perangkat lunak yang andal, rapi, dan mampu menjawab kebutuhan pengguna secara nyata, baik dalam pengerjaan proyek mandiri maupun kolaborasi tim.
+                    </p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+                        <div class="p-4 rounded-xl bg-surface-dark border border-surface-border text-center sm:text-left">
+                            <h5 class="text-2xl font-bold text-brand-400">100%</h5>
+                            <p class="text-xs text-slate-400 mt-1">Komitmen & Kedisiplinan</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-surface-dark border border-surface-border text-center sm:text-left">
+                            <h5 class="text-2xl font-bold text-brand-400">Laravel</h5>
+                            <p class="text-xs text-slate-400 mt-1">Framework Backend Utama</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-surface-dark border border-surface-border col-span-2 sm:col-span-1 text-center sm:text-left">
+                            <h5 class="text-2xl font-bold text-brand-400">Full-Stack</h5>
+                            <p class="text-xs text-slate-400 mt-1">Orientasi Pengembangan</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex justify-center sm:justify-start">
+                        <a href="#" class="inline-flex items-center gap-2 bg-surface-dark hover:bg-surface-hover border border-surface-border text-white px-6 py-3 rounded-full font-medium text-sm transition">
+                            <i class="fas fa-file-arrow-down text-brand-400"></i> Unduh Curriculum Vitae (CV)
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- footer section start -->
-    <footer>
-        <span>Created By <a href="https://www.instagram.com/nauval.16">NauvalRafi</a> | <span class="far fa-copyright"></span> 2024 All rights reserved.</span>
+    <section id="skills" class="py-24 px-6 bg-surface-dark">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold text-brand-400 uppercase tracking-widest">Katalog Skill</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white">Keahlian & Teknologi</h3>
+                <p class="text-slate-400 text-sm">Kombinasi kemampuan teknis koding, pengolahan data, serta analisis sistem terstruktur.</p>
+                <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-surface-card p-6 rounded-2xl border border-surface-border hover:border-brand-500/50 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class='bx bx-server'></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Backend & Database</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-slate-200">PHP & Laravel Framework</span>
+                                <p class="text-xs text-slate-400">MVC Architecture, Auth, & Routing</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-slate-200">MySQL & SQLite</span>
+                                <p class="text-xs text-slate-400">Relational Database, Query, & Migrations</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-slate-200">RESTful API Development</span>
+                                <p class="text-xs text-slate-400">Endpoint Design & Data Integration</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-slate-200">Object-Oriented Programming</span>
+                                <p class="text-xs text-slate-400">Modular & Reusable Code Concepts</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface-card p-6 rounded-2xl border border-surface-border hover:border-brand-500/50 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class='bx bx-code-alt'></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Frontend & Antarmuka</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-slate-200">Tailwind CSS & Bootstrap</span>
+                                <p class="text-xs text-slate-400">Responsive Utility-First Slicing</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-slate-200">JavaScript (ES6+)</span>
+                                <p class="text-xs text-slate-400">DOM Manipulation & Async Logic</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-slate-200">Modern HTML5 & CSS3</span>
+                                <p class="text-xs text-slate-400">Semantic Web & Flexbox/Grid Layout</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-slate-200">Responsive Web Design</span>
+                                <p class="text-xs text-slate-400">Optimasi Tampilan Desktop & Mobile</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface-card p-6 rounded-2xl border border-surface-border hover:border-brand-500/50 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class='bx bx-analyse'></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Analisis Sistem (SI)</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-slate-200">System Analysis & Design</span>
+                                <p class="text-xs text-slate-400">Pemetaan Alur Bisnis & Kebutuhan User</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-slate-200">Database Schema & ERD</span>
+                                <p class="text-xs text-slate-400">Perancangan Struktur & Relasi Data</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-slate-200">UML & DFD Diagramming</span>
+                                <p class="text-xs text-slate-400">Use Case, Flowchart, & Data Flow</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-slate-200">IoT & Hardware Integration</span>
+                                <p class="text-xs text-slate-400">Integrasi Web dengan Sensor/RFID</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface-card p-6 rounded-2xl border border-surface-border hover:border-brand-500/50 transition group lg:col-span-3">
+                    <h4 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <i class='bx bx-wrench text-brand-400'></i> Skills and Tools
+                    </h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 rounded-lg bg-surface-dark border border-surface-border text-xs text-slate-300 font-medium flex items-center gap-2"><i class="fab fa-git-alt text-orange-500 text-sm"></i> Git & GitHub</span>
+                        <span class="px-4 py-2 rounded-lg bg-surface-dark border border-surface-border text-xs text-slate-300 font-medium flex items-center gap-2"><i class="fab fa-python text-yellow-400 text-sm"></i> Python</span>
+                        <span class="px-4 py-2 rounded-lg bg-surface-dark border border-surface-border text-xs text-slate-300 font-medium flex items-center gap-2"><i class="bx bxl-tailwind-css text-teal-400 text-sm"></i> Tailwind CSS</span>
+                        <span class="px-4 py-2 rounded-lg bg-surface-dark border border-surface-border text-xs text-slate-300 font-medium flex items-center gap-2"><i class="fas fa-database text-blue-500 text-sm"></i> MySQL</span>
+                        <span class="px-4 py-2 rounded-lg bg-surface-dark border border-surface-border text-xs text-slate-300 font-medium flex items-center gap-2"><i class="fas fa-leaf text-green-500 text-sm"></i> MongoDB</span>
+                        <span class="px-4 py-2 rounded-lg bg-surface-dark border border-surface-border text-xs text-slate-300 font-medium flex items-center gap-2"><i class="fas fa-chart-bar text-indigo-500 text-sm"></i> Tableau</span>
+                        <span class="px-4 py-2 rounded-lg bg-surface-dark border border-surface-border text-xs text-slate-300 font-medium flex items-center gap-2"><i class="fas fa-paper-plane text-orange-400 text-sm"></i> Postman (API)</span>
+                        <span class="px-4 py-2 rounded-lg bg-surface-dark border border-surface-border text-xs text-slate-300 font-medium flex items-center gap-2"><i class="fab fa-php text-indigo-400 text-sm"></i> Composer</span>
+                        <span class="px-4 py-2 rounded-lg bg-surface-dark border border-surface-border text-xs text-slate-300 font-medium flex items-center gap-2"><i class="fab fa-node-js text-emerald-400 text-sm"></i> NPM</span>
+                        <span class="px-4 py-2 rounded-lg bg-surface-dark border border-surface-border text-xs text-slate-300 font-medium flex items-center gap-2"><i class="fas fa-server text-blue-400 text-sm"></i> Laragon / XAMPP</span>
+                        <span class="px-4 py-2 rounded-lg bg-surface-dark border border-surface-border text-xs text-slate-300 font-medium flex items-center gap-2"><i class="fas fa-bug text-rose-400 text-sm"></i> Debugging</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-surface-card border-t border-surface-border px-6">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold text-brand-400 uppercase tracking-widest">Portofolio Karya</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white">Proyek Pilihan</h3>
+                <p class="text-slate-400 text-sm">Beberapa aplikasi dan sistem yang telah saya bangun.</p>
+                <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Featured Project 1: STM (Layout Interactive Gallery) -->
+                <div class="bg-surface-dark rounded-2xl overflow-hidden border border-brand-500/40 hover:border-brand-400 transition duration-300 flex flex-col lg:flex-row group col-span-1 md:col-span-2 lg:col-span-3 shadow-2xl shadow-brand-500/10 relative">
+                    
+                    <!-- Background Glow -->
+                    <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <!-- Label Unggulan -->
+                    <div class="absolute top-0 left-0 bg-brand-600 text-white text-xs font-bold px-4 py-1.5 rounded-br-xl z-10 flex items-center gap-2 shadow-lg">
+                        <i class="fas fa-star text-yellow-300"></i> Proyek Unggulan (Smart City System)
+                    </div>
+
+                    <!-- Kiri: Penjelasan & Fitur -->
+                    <div class="p-6 sm:p-8 lg:w-1/2 flex flex-col justify-center space-y-6 pt-12 lg:pt-10 z-10">
+                        <div class="space-y-3">
+                            <h4 class="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-brand-400 transition">
+                                STM (Smart Traffic Management)
+                            </h4>
+                            <p class="text-brand-400 font-medium text-sm">
+                                Platform Smart City Terintegrasi AI (YOLO), Sensor IoT, & Pelaporan Publik
+                            </p>
+                            <p class="text-sm text-slate-400 leading-relaxed text-justify">
+                                STM (Smart Traffic Management System) adalah platform digital inovatif yang mengintegrasikan pengawasan lalu lintas cerdas, tanggap bencana, dan transparansi aduan publik demi kelancaran serta keselamatan mobilitas di Kabupaten Bandung.
+                            </p>
+                        </div>
+
+                        <!-- 4 Pilar -->
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 shrink-0 mt-0.5"><i class="fas fa-brain"></i></div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-slate-200">1. Pengawasan Cerdas (YOLO AI)</h5>
+                                    <p class="text-xs text-slate-400 mt-1">Deteksi dan kalkulasi otomatis volume kendaraan serta titik kemacetan via jaringan CCTV berbasis YOLO Computer Vision.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5"><i class="fas fa-water"></i></div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-slate-200">2. Tanggap Bencana (IoT Sensor)</h5>
+                                    <p class="text-xs text-slate-400 mt-1">Pemantauan dan deteksi genangan air serta risiko potensi banjir secara real-time menggunakan sensor ultrasonik fisik.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 shrink-0 mt-0.5"><i class="fas fa-route"></i></div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-slate-200">3. Dynamic Smart Routing</h5>
+                                    <p class="text-xs text-slate-400 mt-1">Sistem navigasi pintar yang otomatis mendeteksi rute pengguna dan merekomendasikan rute alternatif jika terhalang macet atau banjir.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 shrink-0 mt-0.5"><i class="fas fa-bullhorn"></i></div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-slate-200">4. Transparansi Publik</h5>
+                                    <p class="text-xs text-slate-400 mt-1">Sistem aduan infrastruktur jalan oleh masyarakat yang dilengkapi bukti penanganan secara transparan (Sebelum & Sesudah).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-surface-border/50">
+                            <span class="text-xs font-mono text-slate-300 bg-surface-card border border-surface-border px-3 py-1.5 rounded">Laravel</span>
+                            <span class="text-xs font-mono text-slate-300 bg-surface-card border border-surface-border px-3 py-1.5 rounded">YOLO AI</span>
+                            <span class="text-xs font-mono text-slate-300 bg-surface-card border border-surface-border px-3 py-1.5 rounded">IoT Sensor</span>
+                            <span class="text-xs font-mono text-slate-300 bg-surface-card border border-surface-border px-3 py-1.5 rounded">Leaflet Maps</span>
+                        </div>
+                    </div>
+
+                    <!-- Kanan: Showcase Galeri Interaktif -->
+                    <div class="lg:w-1/2 bg-surface-card/60 p-5 sm:p-6 flex flex-col justify-center space-y-3 border-t lg:border-t-0 lg:border-l border-surface-border/50 relative z-10">
+                        
+                        <!-- Layar Utama Display Gambar (Rasio 16:9 aspect-video) -->
+                        <div class="relative group rounded-xl overflow-hidden border border-slate-700/60 shadow-2xl bg-slate-950 aspect-video w-full">
+                            <img id="stmMainImage" src="images/stm-cctv.png" alt="Pengawasan Cerdas YOLO AI" class="w-full h-full object-cover transition duration-500" onerror="this.style.display='none'">
+                            
+                            <div class="absolute top-3 right-3 bg-surface-dark/90 backdrop-blur-md border border-slate-700 text-white text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-2 shadow-lg z-10">
+                                <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                                <span id="stmMainBadge">1. Pengawasan Cerdas (YOLO AI)</span>
+                            </div>
+                            
+                            <div class="absolute bottom-0 left-0 right-0 p-3.5 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent z-10">
+                                <p id="stmMainCaption" class="text-xs text-slate-300 font-medium">Monitoring Real-Time Volume Kendaraan & Deteksi Kemacetan CCTV</p>
+                            </div>
+                        </div>
+
+                        <!-- 4 Thumbnail Pilihan Gambar -->
+                        <div class="grid grid-cols-4 gap-2">
+                            
+                            <button onclick="changeStmView('images/stm-cctv.png', '1. Pengawasan Cerdas (YOLO AI)', 'Monitoring Real-Time Volume Kendaraan & Deteksi Kemacetan CCTV', this)" class="stm-thumb-btn active relative rounded-lg overflow-hidden border-2 border-brand-500 h-16 sm:h-20 bg-slate-900 focus:outline-none transition duration-300 group">
+                                <img src="images/stm-cctv.png" alt="YOLO AI" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="this.style.display='none'">
+                                <div class="absolute inset-0 bg-brand-600/10 group-hover:bg-transparent transition"></div>
+                                <span class="absolute bottom-1 left-0 right-0 text-[9px] font-bold text-white bg-slate-950/90 py-0.5 text-center truncate px-0.5">YOLO AI</span>
+                            </button>
+
+                            <button onclick="changeStmView('images/stm-iot.png', '2. Tanggap Bencana (IoT Sensor)', 'Deteksi Ketinggian Air & Genangan Banjir Real-Time Via Sensor Ultrasonik', this)" class="stm-thumb-btn relative rounded-lg overflow-hidden border border-slate-700 hover:border-emerald-500 h-16 sm:h-20 bg-slate-900 focus:outline-none transition duration-300 group">
+                                <img src="images/stm-iot.png" alt="IoT Sensor" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="this.style.display='none'">
+                                <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition"></div>
+                                <span class="absolute bottom-1 left-0 right-0 text-[9px] font-bold text-white bg-slate-950/90 py-0.5 text-center truncate px-0.5">IoT Sensor</span>
+                            </button>
+
+                            <button onclick="changeStmView('images/stm-rute.png', '3. Dynamic Smart Routing', 'Navigasi Pintar Penentu Rute Alternatif Bebas Macet & Banjir', this)" class="stm-thumb-btn relative rounded-lg overflow-hidden border border-slate-700 hover:border-amber-500 h-16 sm:h-20 bg-slate-900 focus:outline-none transition duration-300 group">
+                                <img src="images/stm-rute.png" alt="Smart Routing" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="this.style.display='none'">
+                                <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition"></div>
+                                <span class="absolute bottom-1 left-0 right-0 text-[9px] font-bold text-white bg-slate-950/90 py-0.5 text-center truncate px-0.5">Smart Route</span>
+                            </button>
+
+                            <button onclick="changeStmView('images/stm-transparansi.png', '4. Transparansi Publik', 'Bukti Akuntabilitas Penanganan Infrastruktur Jalan (Sebelum & Sesudah)', this)" class="stm-thumb-btn relative rounded-lg overflow-hidden border border-slate-700 hover:border-purple-500 h-16 sm:h-20 bg-slate-900 focus:outline-none transition duration-300 group">
+                                <img src="images/stm-transparansi.png" alt="Transparansi" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="this.style.display='none'">
+                                <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition"></div>
+                                <span class="absolute bottom-1 left-0 right-0 text-[9px] font-bold text-white bg-slate-950/90 py-0.5 text-center truncate px-0.5">Transparansi</span>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+    </section>
+
+    <section id="hobbies" class="py-24 bg-surface-dark px-6">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold text-brand-400 uppercase tracking-widest">Keseimbangan Hidup</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white">Hobi & Kegemaran</h3>
+                <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                
+                <div class="p-8 bg-surface-card rounded-2xl border border-surface-border text-center hover:-translate-y-1 transition duration-300 shadow-lg shadow-black/20">
+                    <div class="w-16 h-16 rounded-full bg-brand-500/10 text-brand-400 flex items-center justify-center text-3xl mx-auto mb-6">
+                        <i class='bx bx-football'></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Futsal & Sepakbola</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Mengasah kerjasama tim, strategi cepat, dan stamina fisik melalui olahraga bola bersama rekan-rekan.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-surface-card rounded-2xl border border-surface-border text-center hover:-translate-y-1 transition duration-300 shadow-lg shadow-black/20">
+                    <div class="w-16 h-16 rounded-full bg-brand-500/10 text-brand-400 flex items-center justify-center text-3xl mx-auto mb-6">
+                        <i class='bx bx-tennis-ball'></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Bulu Tangkis</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Melatih kelincahan dan fokus keputusan dalam durasi singkat di lapangan badminton.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-surface-card rounded-2xl border border-surface-border text-center hover:-translate-y-1 transition duration-300 shadow-lg shadow-black/20">
+                    <div class="w-16 h-16 rounded-full bg-brand-500/10 text-brand-400 flex items-center justify-center text-3xl mx-auto mb-6">
+                        <i class='bx bx-joystick'></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Esports & Tactical Game</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Menikmati permainan bertema strategi seperti Mobile Legends dan PUBG untuk melatih taktik analisis tim.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-surface-card border-t border-surface-border px-6">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold text-brand-400 uppercase tracking-widest">Mari Terhubung</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white">Hubungi Saya</h3>
+                <p class="text-slate-400 text-sm">Punya pertanyaan, proyek, atau peluang kerjasama? Jangan ragu untuk mengirimkan pesan!</p>
+                <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                
+                <div class="md:col-span-5 space-y-4">
+                    <div class="p-6 bg-surface-dark rounded-2xl border border-surface-border flex items-center gap-4 hover:border-brand-500/50 transition">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 block font-medium mb-1">Nama Lengkap</span>
+                            <span class="text-slate-200 font-semibold text-base">Nauval Rafi Adelia Putra</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-surface-dark rounded-2xl border border-surface-border flex items-center gap-4 hover:border-brand-500/50 transition">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 block font-medium mb-1">Domisili</span>
+                            <span class="text-slate-200 font-semibold text-base">Baleendah, Jawa Barat</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-surface-dark rounded-2xl border border-surface-border flex items-center gap-4 hover:border-brand-500/50 transition">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 block font-medium mb-1">Email Kontak</span>
+                            <a href="mailto:nauval.rafi@example.com" class="text-slate-200 font-semibold text-base hover:text-brand-400 transition">nauval.rafi@example.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 bg-surface-dark p-8 rounded-2xl border border-surface-border shadow-xl">
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah terkirim.');">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wide">Nama Anda</label>
+                            <input type="text" placeholder="Masukkan nama Anda" required class="w-full bg-surface-card border border-surface-border focus:border-brand-500 rounded-xl px-5 py-3.5 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-brand-500 transition placeholder:text-slate-600">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wide">Email Anda</label>
+                            <input type="email" placeholder="nama@email.com" required class="w-full bg-surface-card border border-surface-border focus:border-brand-500 rounded-xl px-5 py-3.5 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-brand-500 transition placeholder:text-slate-600">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wide">Pesan</label>
+                            <textarea rows="5" placeholder="Tuliskan pesan atau penawaran Anda..." required class="w-full bg-surface-card border border-surface-border focus:border-brand-500 rounded-xl px-5 py-3.5 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-brand-500 transition resize-none placeholder:text-slate-600"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-medium py-4 rounded-xl transition shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2">
+                            Kirim Pesan <i class="fas fa-paper-plane text-xs"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-surface-dark text-center py-8 border-t border-surface-border">
+        <div class="max-w-7xl mx-auto px-6 space-y-3">
+            <p class="text-slate-400 text-sm">
+                Dirancang & Dikembangkan oleh <a href="https://www.instagram.com/nauval.16" target="_blank" class="text-white font-semibold hover:text-brand-400 transition">Nauval Rafi</a>
+            </p>
+            <p class="text-slate-600 text-xs">
+                &copy; 2026 All rights reserved. Built with Tailwind CSS & Vanilla JS.
+            </p>
+        </div>
     </footer>
 
-    <script src="script.js"> </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // 1. Header Sticky Effect & Scroll Up Button
+            const header = document.getElementById('header');
+            const scrollUpBtn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                    header.classList.add('bg-surface-dark/90', 'backdrop-blur-md', 'border-b', 'border-surface-border', 'shadow-lg');
+                } else {
+                    header.classList.remove('bg-surface-dark/90', 'backdrop-blur-md', 'border-b', 'border-surface-border', 'shadow-lg');
+                }
+
+                if (window.scrollY > 400) {
+                    scrollUpBtn.classList.remove('opacity-0', 'pointer-events-none');
+                    scrollUpBtn.classList.add('opacity-100', 'pointer-events-auto');
+                } else {
+                    scrollUpBtn.classList.add('opacity-0', 'pointer-events-none');
+                    scrollUpBtn.classList.remove('opacity-100', 'pointer-events-auto');
+                }
+            });
+
+            // 2. Scroll Up Action
+            scrollUpBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // 3. Mobile Menu Navigation
+            const menuBtn = document.getElementById('menuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = menuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.className = 'fas fa-bars';
+                } else {
+                    icon.className = 'fas fa-xmark';
+                }
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuBtn.querySelector('i').className = 'fas fa-bars';
+                });
+            });
+
+            // 4. Typed.js Initialization
+            if (typeof Typed !== 'undefined') {
+                new Typed(".typing", {
+                    strings: [
+                        "Junior Web Developer",
+                        "System Analyst (SI)",
+                        "Tech Enthusiast"
+                    ],
+                    typeSpeed: 70,
+                    backSpeed: 40,
+                    backDelay: 2000,
+                    loop: true
+                });
+            }
+        });
+    </script>
 </body>
 </html>
