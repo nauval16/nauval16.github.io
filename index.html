@@ -75,7 +75,7 @@
                 <a href="#about" class="hover:text-brand-400 transition">Tentang</a>
                 <a href="#skills" class="hover:text-brand-400 transition">Keahlian</a>
                 <a href="#projects" class="hover:text-brand-400 transition">Proyek</a>
-                <a href="#hobbies" class="hover:text-brand-400 transition">Hobi</a>
+                <a href="#achievements" class="hover:text-brand-400 transition">Pencapaian</a>
                 <a href="#contact" class="bg-brand-600 hover:bg-brand-500 text-white px-5 py-2.5 rounded-full transition shadow-md shadow-brand-500/20">Kontak Saya</a>
             </div>
 
@@ -89,7 +89,7 @@
             <a href="#about" class="mobile-link hover:text-brand-400 transition">Tentang</a>
             <a href="#skills" class="mobile-link hover:text-brand-400 transition">Keahlian</a>
             <a href="#projects" class="mobile-link hover:text-brand-400 transition">Proyek</a>
-            <a href="#hobbies" class="mobile-link hover:text-brand-400 transition">Hobi</a>
+            <a href="#achievements" class="mobile-link hover:text-brand-400 transition">Pencapaian</a>
             <a href="#contact" class="mobile-link text-brand-400 font-semibold">Kontak Saya</a>
         </div>
     </header>
@@ -177,10 +177,11 @@
 
                 <div class="lg:col-span-7 space-y-6 text-slate-300 leading-relaxed">
                     <p class="text-lg font-medium text-slate-200">
-                        Saya adalah seorang <span class="text-white font-semibold">Web Developer</span> dan <span class="text-white font-semibold">Mahasiswa Sistem Informasi</span> yang berfokus pada pengembangan aplikasi web yang efisien, terstruktur, dan responsif.
+                        Saya adalah seorang <span class="text-white font-semibold">Web Developer</span> dan <span class="text-white font-semibold">Mahasiswa Sistem Informasi Kota Cerdas Telkom University</span> dengan minat dan fokus pada pengembangan web.
                     </p>
                     <p>
-                        Berbekal fondasi pendidikan dari SMKN 7 Baleendah dan pengembangan akademis Sistem Informasi, saya mengombinasikan logika pemrograman dengan analisis alur bisnis. Keahlian utama saya berpusat pada perancangan basis data, integrasi sistem backend, serta pembuatan antarmuka pengguna yang intuitif.
+                        Memiliki pemahaman dasar pengembangan aplikasi berbasis web, struktur sistem, serta alur kerja front-end
+                        dan back-end. Terbiasa bekerja secara terstruktur, logis, dan kolaboratif dalam menyelesaikan proyek. Termotivasi untuk terus mengembangkan kemampuan web development
                     </p>
                     <p>
                         Saya selalu berdedikasi untuk menghadirkan solusi perangkat lunak yang andal, rapi, dan mampu menjawab kebutuhan pengguna secara nyata, baik dalam pengerjaan proyek mandiri maupun kolaborasi tim.
@@ -435,48 +436,32 @@
                         </div>
                     </div>
 
-                    <!-- Kanan: Showcase Galeri Interaktif -->
                     <div class="lg:w-1/2 bg-surface-card/60 p-5 sm:p-6 flex flex-col justify-center space-y-3 border-t lg:border-t-0 lg:border-l border-surface-border/50 relative z-10">
                         
-                        <!-- Layar Utama Display Gambar (Rasio 16:9 aspect-video) -->
                         <div class="relative group rounded-xl overflow-hidden border border-slate-700/60 shadow-2xl bg-slate-950 aspect-video w-full">
-                            <img id="stmMainImage" src="images/stm-cctv.png" alt="Pengawasan Cerdas YOLO AI" class="w-full h-full object-cover transition duration-500" onerror="this.style.display='none'">
-                            
-                            <div class="absolute top-3 right-3 bg-surface-dark/90 backdrop-blur-md border border-slate-700 text-white text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-2 shadow-lg z-10">
-                                <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
-                                <span id="stmMainBadge">1. Pengawasan Cerdas (YOLO AI)</span>
-                            </div>
-                            
-                            <div class="absolute bottom-0 left-0 right-0 p-3.5 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent z-10">
-                                <p id="stmMainCaption" class="text-xs text-slate-300 font-medium">Monitoring Real-Time Volume Kendaraan & Deteksi Kemacetan CCTV</p>
-                            </div>
+                            <img id="stmMainImage" src="images/stm-1.jpg" alt="Preview Proyek STM" class="w-full h-full object-cover transition duration-500" onerror="this.style.display='none'">
                         </div>
 
-                        <!-- 4 Thumbnail Pilihan Gambar -->
                         <div class="grid grid-cols-4 gap-2">
                             
-                            <button onclick="changeStmView('images/stm-cctv.png', '1. Pengawasan Cerdas (YOLO AI)', 'Monitoring Real-Time Volume Kendaraan & Deteksi Kemacetan CCTV', this)" class="stm-thumb-btn active relative rounded-lg overflow-hidden border-2 border-brand-500 h-16 sm:h-20 bg-slate-900 focus:outline-none transition duration-300 group">
-                                <img src="images/stm-cctv.png" alt="YOLO AI" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="this.style.display='none'">
-                                <div class="absolute inset-0 bg-brand-600/10 group-hover:bg-transparent transition"></div>
-                                <span class="absolute bottom-1 left-0 right-0 text-[9px] font-bold text-white bg-slate-950/90 py-0.5 text-center truncate px-0.5">YOLO AI</span>
+                            <button onclick="changeStmGallery('images/stm-1.jpg', this)" class="stm-thumb-btn active relative rounded-lg overflow-hidden border-2 border-brand-500 h-16 sm:h-20 bg-slate-900 focus:outline-none transition duration-300 group">
+                                <img src="images/stm-1.jpg" alt="Thumb 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="this.style.display='none'">
+                                <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition"></div>
                             </button>
 
-                            <button onclick="changeStmView('images/stm-iot.png', '2. Tanggap Bencana (IoT Sensor)', 'Deteksi Ketinggian Air & Genangan Banjir Real-Time Via Sensor Ultrasonik', this)" class="stm-thumb-btn relative rounded-lg overflow-hidden border border-slate-700 hover:border-emerald-500 h-16 sm:h-20 bg-slate-900 focus:outline-none transition duration-300 group">
-                                <img src="images/stm-iot.png" alt="IoT Sensor" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="this.style.display='none'">
+                            <button onclick="changeStmGallery('images/stm-2.jpg', this)" class="stm-thumb-btn relative rounded-lg overflow-hidden border border-slate-700 hover:border-brand-500 h-16 sm:h-20 bg-slate-900 focus:outline-none transition duration-300 group">
+                                <img src="images/stm-2.jpg" alt="Thumb 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="this.style.display='none'">
                                 <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition"></div>
-                                <span class="absolute bottom-1 left-0 right-0 text-[9px] font-bold text-white bg-slate-950/90 py-0.5 text-center truncate px-0.5">IoT Sensor</span>
                             </button>
 
-                            <button onclick="changeStmView('images/stm-rute.png', '3. Dynamic Smart Routing', 'Navigasi Pintar Penentu Rute Alternatif Bebas Macet & Banjir', this)" class="stm-thumb-btn relative rounded-lg overflow-hidden border border-slate-700 hover:border-amber-500 h-16 sm:h-20 bg-slate-900 focus:outline-none transition duration-300 group">
-                                <img src="images/stm-rute.png" alt="Smart Routing" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="this.style.display='none'">
+                            <button onclick="changeStmGallery('images/stm-3.jpg', this)" class="stm-thumb-btn relative rounded-lg overflow-hidden border border-slate-700 hover:border-brand-500 h-16 sm:h-20 bg-slate-900 focus:outline-none transition duration-300 group">
+                                <img src="images/stm-3.jpg" alt="Thumb 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="this.style.display='none'">
                                 <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition"></div>
-                                <span class="absolute bottom-1 left-0 right-0 text-[9px] font-bold text-white bg-slate-950/90 py-0.5 text-center truncate px-0.5">Smart Route</span>
                             </button>
 
-                            <button onclick="changeStmView('images/stm-transparansi.png', '4. Transparansi Publik', 'Bukti Akuntabilitas Penanganan Infrastruktur Jalan (Sebelum & Sesudah)', this)" class="stm-thumb-btn relative rounded-lg overflow-hidden border border-slate-700 hover:border-purple-500 h-16 sm:h-20 bg-slate-900 focus:outline-none transition duration-300 group">
-                                <img src="images/stm-transparansi.png" alt="Transparansi" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="this.style.display='none'">
+                            <button onclick="changeStmGallery('images/stm-4.jpg', this)" class="stm-thumb-btn relative rounded-lg overflow-hidden border border-slate-700 hover:border-brand-500 h-16 sm:h-20 bg-slate-900 focus:outline-none transition duration-300 group">
+                                <img src="images/stm-4.jpg" alt="Thumb 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="this.style.display='none'">
                                 <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition"></div>
-                                <span class="absolute bottom-1 left-0 right-0 text-[9px] font-bold text-white bg-slate-950/90 py-0.5 text-center truncate px-0.5">Transparansi</span>
                             </button>
 
                         </div>
@@ -507,46 +492,224 @@
         </div>
     </section>
 
-    <section id="hobbies" class="py-24 bg-surface-dark px-6">
+    <section id="achievements" class="py-24 bg-surface-dark border-t border-surface-border px-6">
         <div class="max-w-7xl mx-auto">
             
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <h2 class="text-xs font-bold text-brand-400 uppercase tracking-widest">Keseimbangan Hidup</h2>
-                <h3 class="text-3xl sm:text-4xl font-bold text-white">Hobi & Kegemaran</h3>
+                <h2 class="text-xs font-bold text-brand-400 uppercase tracking-widest">Bukti Kompetensi & Pengalaman</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white">Achievements & Certifications</h3>
+                <p class="text-slate-400 text-sm italic sm:text-base">
+                    "A collection of certificates and badges that I have earned throughout my professional journey."
+                </p>
                 <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div class="p-8 bg-surface-card rounded-2xl border border-surface-border text-center hover:-translate-y-1 transition duration-300 shadow-lg shadow-black/20">
-                    <div class="w-16 h-16 rounded-full bg-brand-500/10 text-brand-400 flex items-center justify-center text-3xl mx-auto mb-6">
-                        <i class='bx bx-football'></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-2">Futsal & Sepakbola</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Mengasah kerjasama tim, strategi cepat, dan stamina fisik melalui olahraga bola bersama rekan-rekan.
-                    </p>
-                </div>
+                <a href="https://sanbercode.com/certificate/in/0ecb94cc-a361-440e-8cda-88b6e2db5d23" target="_blank" rel="noopener noreferrer" class="group bg-surface-card rounded-2xl border border-surface-border hover:border-brand-500/60 transition-all duration-300 hover:-translate-y-1.5 shadow-xl flex flex-col justify-between overflow-hidden">
+                    
+                    <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-900 border-b border-surface-border">
+                        <img src="images/cert-laravel.jpg" alt="Sertifikat Laravel Sanbercode" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.style.display='none'">
+                        
+                        <!-- <div class="absolute inset-0 bg-gradient-to-br from-brand-950/40 to-surface-card flex flex-col items-center justify-center p-4 -z-0">
+                            <i class='bx bx-certification text-5xl text-brand-400/40 mb-2 group-hover:scale-110 transition'></i>
+                            <span class="text-xs text-slate-500 font-mono">Pratinjau Sertifikat</span>
+                        </div> -->
 
-                <div class="p-8 bg-surface-card rounded-2xl border border-surface-border text-center hover:-translate-y-1 transition duration-300 shadow-lg shadow-black/20">
-                    <div class="w-16 h-16 rounded-full bg-brand-500/10 text-brand-400 flex items-center justify-center text-3xl mx-auto mb-6">
-                        <i class='bx bx-tennis-ball'></i>
+                        <div class="absolute top-3 right-3 z-10">
+                            <span class="text-[10px] font-bold text-white bg-brand-600/90 backdrop-blur-md border border-brand-400/30 px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                                Bootcamp Certificate
+                            </span>
+                        </div>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-2">Bulu Tangkis</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Melatih kelincahan dan fokus keputusan dalam durasi singkat di lapangan badminton.
-                    </p>
-                </div>
 
-                <div class="p-8 bg-surface-card rounded-2xl border border-surface-border text-center hover:-translate-y-1 transition duration-300 shadow-lg shadow-black/20">
-                    <div class="w-16 h-16 rounded-full bg-brand-500/10 text-brand-400 flex items-center justify-center text-3xl mx-auto mb-6">
-                        <i class='bx bx-joystick'></i>
+                    <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h4 class="text-xl font-bold text-white group-hover:text-brand-400 transition leading-snug">
+                                Laravel Web Developement
+                            </h4>
+                            <p class="text-sm font-semibold text-slate-300 flex items-center gap-1.5">
+                                <i class='bx bx-buildings text-brand-400'></i> Sanbercode
+                            </p>
+                            <p class="text-xs text-slate-400 leading-relaxed pt-1">
+                                mempelajari kembali dari 0, mulai html, css, javascript dasar, php dasar, database, git, lalu ke materi inti yaitu framework laravel, yang mempelajari konsep mvc, database dan migrations, eloquent ORM, Eloquent relationship, CRUD, dan deploy laravel project
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-surface-border/60 flex items-center justify-between text-xs font-mono text-slate-400">
+                            <span class="flex items-center gap-1.5">
+                                <i class='bx bx-calendar text-slate-500'></i> Issued July 2024
+                            </span>
+                            <!-- <span class="text-brand-400 font-semibold group-hover:translate-x-1 transition flex items-center gap-1">
+                                Lihat Bukti <i class='bx bx-right-arrow-alt text-base'></i>
+                            </span> -->
+                        </div>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-2">Esports & Tactical Game</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Menikmati permainan bertema strategi seperti Mobile Legends dan PUBG untuk melatih taktik analisis tim.
-                    </p>
-                </div>
+                </a>
+
+                <a href="https://example.com/sertifikat-expo" target="_blank" rel="noopener noreferrer" class="group bg-surface-card rounded-2xl border border-surface-border hover:border-emerald-500/60 transition-all duration-300 hover:-translate-y-1.5 shadow-xl flex flex-col justify-between overflow-hidden">
+                    
+                    <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-900 border-b border-surface-border">
+                        <img src="images/expo-tech.jpg" alt="Dokumentasi Expo Kampus" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.style.display='none'">
+                        
+                        <!-- <div class="absolute inset-0 bg-gradient-to-br from-emerald-950/40 to-surface-card flex flex-col items-center justify-center p-4 -z-0">
+                            <i class='bx bx-slideshow text-5xl text-emerald-400/40 mb-2 group-hover:scale-110 transition'></i>
+                            <span class="text-xs text-slate-500 font-mono">FIT Expo 2025</span>
+                        </div> -->
+
+                        <div class="absolute top-3 right-3 z-10">
+                            <span class="text-[10px] font-bold text-white bg-emerald-600/90 backdrop-blur-md border border-emerald-400/30 px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                                Foto Dokumentasi Expo
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h4 class="text-xl font-bold text-white group-hover:text-emerald-400 transition leading-snug">
+                                FIT Expo 2025
+                            </h4>
+                            <p class="text-sm font-semibold text-slate-300 flex items-center gap-1.5">
+                                <i class='bx bx-buildings text-emerald-400'></i> Telkom University
+                            </p>
+                            <p class="text-xs text-slate-400 leading-relaxed pt-1">
+                                Terpilih untuk menampilkan dan mendemonstrasikan proyek sistem platform inovatif terintegrasi di hadapan civitas akademika dan pengunjung.
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-surface-border/60 flex items-center justify-between text-xs font-mono text-slate-400">
+                            <span class="flex items-center gap-1.5">
+                                <i class='bx bx-calendar text-slate-500'></i> Issued Jun 2025
+                            </span>
+                            <!-- <span class="text-emerald-400 font-semibold group-hover:translate-x-1 transition flex items-center gap-1">
+                                Lihat Foto <i class='bx bx-right-arrow-alt text-base'></i>
+                            </span> -->
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://example.com/sertifikat-bnsp" target="_blank" rel="noopener noreferrer" class="group bg-surface-card rounded-2xl border border-surface-border hover:border-sky-500/60 transition-all duration-300 hover:-translate-y-1.5 shadow-xl flex flex-col justify-between overflow-hidden">
+                    
+                    <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-900 border-b border-surface-border">
+                        <img src="images/cert-bnsp.jpg" alt="Sertifikat BNSP KKNI Level II RPL" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.style.display='none'">
+                        
+                        <!-- <div class="absolute inset-0 bg-gradient-to-br from-sky-950/40 to-surface-card flex flex-col items-center justify-center p-4 -z-0">
+                            <i class='bx bx-badge-check text-5xl text-sky-400/40 mb-2 group-hover:scale-110 transition'></i>
+                            <span class="text-xs text-slate-500 font-mono">Foto Sertifikat BNSP</span>
+                        </div> -->
+
+                        <div class="absolute top-3 right-3 z-10">
+                            <span class="text-[10px] font-bold text-white bg-sky-600/90 backdrop-blur-md border border-sky-400/30 px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                                National Certification
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h4 class="text-xl font-bold text-white group-hover:text-sky-400 transition leading-snug">
+                                Software Development
+                            </h4>
+                            <p class="text-sm font-semibold text-slate-300 flex items-center gap-1.5">
+                                <i class='bx bx-buildings text-sky-400'></i> BNSP (Badan Nasional Sertifikasi Profesi)
+                            </p>
+                            <p class="text-xs text-slate-400 leading-relaxed pt-1">
+                                Sertifikasi kompetensi nasional standar KKNI Level II di bidang Software Development / Rekayasa Perangkat Lunak yang diakui secara nasional.
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-surface-border/60 flex items-center justify-between text-xs font-mono text-slate-400">
+                            <span class="flex items-center gap-1.5">
+                                <i class='bx bx-calendar text-slate-500'></i> Issued Mar 2024
+                            </span>
+                            <!-- <span class="text-sky-400 font-semibold group-hover:translate-x-1 transition flex items-center gap-1">
+                                Lihat Bukti <i class='bx bx-right-arrow-alt text-base'></i>
+                            </span> -->
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://example.com/sertifikat-pkl" target="_blank" rel="noopener noreferrer" class="group bg-surface-card rounded-2xl border border-surface-border hover:border-indigo-500/60 transition-all duration-300 hover:-translate-y-1.5 shadow-xl flex flex-col justify-between overflow-hidden">
+                    
+                    <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-900 border-b border-surface-border">
+                        <img src="images/cert-pkl.jpg" alt="Sertifikat PKL PT Inovindo Digital Media" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.style.display='none'">
+                        
+                        <!-- <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/40 to-surface-card flex flex-col items-center justify-center p-4 -z-0">
+                            <i class='bx bx-briefcase text-5xl text-indigo-400/40 mb-2 group-hover:scale-110 transition'></i>
+                            <span class="text-xs text-slate-500 font-mono">Foto Sertifikat PKL</span>
+                        </div> -->
+
+                        <div class="absolute top-3 right-3 z-10">
+                            <span class="text-[10px] font-bold text-white bg-indigo-600/90 backdrop-blur-md border border-indigo-400/30 px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                                Internship Certificate
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h4 class="text-xl font-bold text-white group-hover:text-indigo-400 transition leading-snug">
+                                Project Manager Team 1 (PKL)
+                            </h4>
+                            <p class="text-sm font-semibold text-slate-300 flex items-center gap-1.5">
+                                <i class='bx bx-buildings text-indigo-400'></i> PT. Inovindo Digital Media
+                            </p>
+                            <p class="text-xs text-slate-400 leading-relaxed pt-1">
+                                Menjalani PKL industri selama 3 bulan dan memimpin Team 1 SMKN 7 Baleendah dalam manajemen alur kerja proyek, koordinasi tim, dan pengembangan sistem web.
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-surface-border/60 flex items-center justify-between text-xs font-mono text-slate-400">
+                            <span class="flex items-center gap-1.5">
+                                <i class='bx bx-calendar text-slate-500'></i> Issued Jun 2023
+                            </span>
+                            <!-- <span class="text-indigo-400 font-semibold group-hover:translate-x-1 transition flex items-center gap-1">
+                                Lihat Bukti <i class='bx bx-right-arrow-alt text-base'></i>
+                            </span> -->
+                        </div>
+                    </div>
+                </a>
+
+                <!-- <a href="https://example.com/sertifikat-lomba" target="_blank" rel="noopener noreferrer" class="group bg-surface-card rounded-2xl border border-surface-border hover:border-amber-500/60 transition-all duration-300 hover:-translate-y-1.5 shadow-xl flex flex-col justify-between overflow-hidden">
+                    
+                    <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-900 border-b border-surface-border">
+                        <img src="images/award-smartcity.jpg" alt="Sertifikat Lomba Smart City" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.style.display='none'">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-950/40 to-surface-card flex flex-col items-center justify-center p-4 -z-0">
+                            <i class='bx bx-trophy text-5xl text-amber-400/40 mb-2 group-hover:scale-110 transition'></i>
+                            <span class="text-xs text-slate-500 font-mono">Foto Piala / Piagam</span>
+                        </div>
+
+                        <div class="absolute top-3 right-3 z-10">
+                            <span class="text-[10px] font-bold text-white bg-amber-600/90 backdrop-blur-md border border-amber-400/30 px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                                Competition Award
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h4 class="text-xl font-bold text-white group-hover:text-amber-400 transition leading-snug">
+                                Smart City Innovation Challenge
+                            </h4>
+                            <p class="text-sm font-semibold text-slate-300 flex items-center gap-1.5">
+                                <i class='bx bx-buildings text-amber-400'></i> National Tech Competition
+                            </p>
+                            <p class="text-xs text-slate-400 leading-relaxed pt-1">
+                                Penghargaan apresiasi atas perancangan solusi teknologi tata kelola cerdas dan integrasi sistem tanggap infrastruktur.
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-surface-border/60 flex items-center justify-between text-xs font-mono text-slate-400">
+                            <span class="flex items-center gap-1.5">
+                                <i class='bx bx-calendar text-slate-500'></i> Issued Mar 2026
+                            </span>
+                            <span class="text-amber-400 font-semibold group-hover:translate-x-1 transition flex items-center gap-1">
+                                Detail Award <i class='bx bx-right-arrow-alt text-base'></i>
+                            </span>
+                        </div>
+                    </div>
+                </a> -->
 
             </div>
         </div>
@@ -696,6 +859,26 @@
                 });
             }
         });
+
+        function changeStmGallery(imageSrc, element) {
+            const mainImg = document.getElementById('stmMainImage');
+            
+            // Ubah gambar di frame utama
+            if (mainImg) {
+                mainImg.src = imageSrc;
+            }
+
+            // Ubah efek ring/bingkai pada thumbnail yang sedang aktif
+            document.querySelectorAll('.stm-thumb-btn').forEach(btn => {
+                btn.classList.remove('border-brand-500', 'border-2');
+                btn.classList.add('border-slate-700', 'border');
+            });
+            
+            if (element) {
+                element.classList.remove('border-slate-700', 'border');
+                element.classList.add('border-brand-500', 'border-2');
+            }
+        }
     </script>
 </body>
 </html>
